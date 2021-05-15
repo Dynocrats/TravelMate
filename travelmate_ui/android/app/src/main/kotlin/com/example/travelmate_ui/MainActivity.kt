@@ -1,4 +1,4 @@
-package com.example.travelmate_ui
+package com.dynocrats.travelmate
 
 import io.flutter.embedding.android.FlutterActivity
 
