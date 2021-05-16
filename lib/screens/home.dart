@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SizedBox(height: 100.0,),
               ElevatedButton(
-                child: Text("Sign Out"),
+                child: Text("Log Out"),
                 onPressed: () {
                   authBloc.logoutFB();
                   authBloc.logoutGoogle();
