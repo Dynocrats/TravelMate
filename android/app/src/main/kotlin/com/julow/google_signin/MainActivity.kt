@@ -1,4 +1,4 @@
-package com.julow.google_signin
+package com.dynocrats.travelmate
 
 import io.flutter.embedding.android.FlutterActivity
 

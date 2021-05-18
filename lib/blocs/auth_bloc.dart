@@ -95,13 +95,14 @@ class AuthBloc {
     final user = FirebaseAuth.instance.currentUser;
     final db = FirebaseFirestore.instance;
 
+
     await db.collection('users').doc(user.uid).set({
       'userName': user.displayName,
-      'userEmail': user.email,
+      'userEmail': user.providerData[0].email,
       'userImageUrl': user.photoURL,
       'userType': 'traveller'
     });
 
-    print(user);
+    print(user.providerData[0].email);
   }
 }
