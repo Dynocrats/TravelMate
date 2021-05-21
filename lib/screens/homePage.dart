@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'locationDescription.dart';
+import 'searchLocation.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -44,7 +44,7 @@ class HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LocationDescription()),
+                        MaterialPageRoute(builder: (context) => SearchLocation()),
                       );
                     },
                   ),
@@ -211,12 +211,12 @@ class HomePageState extends State<HomePage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.post_add_sharp),
+            label: 'Posts',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.person_pin_outlined),
+            label: 'Profile',
           ),
         ],
         selectedItemColor: Colors.amber[800],

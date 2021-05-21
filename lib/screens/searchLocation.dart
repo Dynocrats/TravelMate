@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'homePage.dart';
+import './locationDetails.dart';
 
-class LocationDescription extends StatefulWidget {
+class SearchLocation extends StatefulWidget {
   @override
-  _LocationDescriptionState createState() => _LocationDescriptionState();
+  _SearchLocationState createState() => _SearchLocationState();
 }
 
-class _LocationDescriptionState extends State<LocationDescription> {
+class _SearchLocationState extends State<SearchLocation> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 4,
       child: Scaffold(
         appBar: AppBar(
@@ -47,37 +48,13 @@ class _LocationDescriptionState extends State<LocationDescription> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Container(
-              alignment: Alignment.topCenter,
-              // color: Colors.green[200],
-              child: ListView(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30.0),
-                        color: Colors.red
-                      ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30.0),
-                        color: Colors.white
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              // decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.circular(30.0), color: Colors.red),
-              // child: Text('It\'s cloudy here'),
-            ),
-            Center(
-              child: Text('It\'s rainy here'),
-            ),
-            Center(
-              child: Text('It\'s sunny here'),
-            ),
+            LocationDetails(),
+            LocationDetails(),
             Center(
               child: Text('It\'s snowy here'),
+            ),
+            Center(
+              child: Text('It\'s cloudy here'),
             ),
           ],
         ),
