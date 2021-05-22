@@ -10,8 +10,16 @@ class _LocationDetailsState extends State<LocationDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Colors.blue,
+            Colors.green,
+          ],
+        )),
         alignment: Alignment.topCenter,
-        color: Colors.green[200],
         padding: EdgeInsets.all(10.0),
         child: ListView(
           children: <Widget>[
@@ -33,10 +41,9 @@ class _LocationDetailsState extends State<LocationDetails> {
               child: Text(
                 'IMAGES',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                ),
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
               ),
             ),
             Padding(
@@ -44,10 +51,9 @@ class _LocationDetailsState extends State<LocationDetails> {
               child: Text(
                 'NEARBY LOCATIONS',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                ),
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ],

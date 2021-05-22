@@ -14,7 +14,15 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         alignment: Alignment.topCenter,
-        color: Colors.green[200],
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Colors.blue,
+            Colors.green,
+          ],
+        )),
         child: ListView(
           children: <Widget>[
             Stack(
@@ -44,7 +52,8 @@ class HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SearchLocation()),
+                        MaterialPageRoute(
+                            builder: (context) => SearchLocation()),
                       );
                     },
                   ),
@@ -59,8 +68,9 @@ class HomePageState extends State<HomePage> {
               child: Text(
                 "Top Destinations...",
                 style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
             ),
@@ -109,8 +119,9 @@ class HomePageState extends State<HomePage> {
               child: Text(
                 "Top Guides...",
                 style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
             ),
@@ -158,8 +169,9 @@ class HomePageState extends State<HomePage> {
               child: Text(
                 "Top Hotels...",
                 style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
             ),

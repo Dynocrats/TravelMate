@@ -15,6 +15,7 @@ class _SearchLocationState extends State<SearchLocation> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back_ios),
             tooltip: 'Go to the next page',
